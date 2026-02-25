@@ -9,17 +9,18 @@
 	"private": true,
 	"version": "4.0.427",
 	"devDependencies": {
-		"@remotion/eslint-config-internal": "^4.0.0",
-		"eslint": "catalog:",
 		"@remotion/bundler": "^4.0.0",
 		"remotion": "^4.0.0",
-		"react": "catalog:",
-		"react-dom": "catalog:",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"@types/react": "^19.0.0",
 		"@remotion/shapes": "^4.0.0",
 		"@remotion/three": "^4.0.0",
 		"@remotion/cli": "^4.0.0",
-		"@typescript/native-preview": "catalog:",
 		"@remotion/lottie": "^4.0.0",
-		"@remotion/google-fonts": "^4.0.0"
+		"@remotion/google-fonts": "^4.0.0",
+		"@remotion/transitions": "^4.0.0",
+		"typescript": "^5.0.0"
 	}
 }
+

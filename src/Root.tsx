@@ -1,38 +1,25 @@
 import { Composition } from "remotion";
-import { MyAnimation as BarChartAnimation } from "../skills/remotion/rules/assets/charts-bar-chart";
-import { MyAnimation as TypewriterAnimation } from "../skills/remotion/rules/assets/text-animations-typewriter";
-import { MyAnimation as WordHighlightAnimation } from "../skills/remotion/rules/assets/text-animations-word-highlight";
+import { SetFlowPromo, TOTAL_FRAMES } from "./SetFlowPromo";
+import { LariPromo, LARI_TOTAL_FRAMES } from "./LariPromo";
 
 export const RemotionRoot = () => {
   return (
     <>
       <Composition
-        id="BarChart"
-        component={BarChartAnimation}
-        durationInFrames={120}
-        fps={30}
-        width={1280}
-        height={720}
-      />
-      <Composition
-        id="Typewriter"
-        component={TypewriterAnimation}
-        durationInFrames={180}
-        fps={30}
-        width={1920}
-        height={1080}
-        defaultProps={{
-          fullText: "From prompt to motion graphics. This is Remotion.",
-          pauseAfter: "From prompt to motion graphics.",
-        }}
-      />
-      <Composition
-        id="WordHighlight"
-        component={WordHighlightAnimation}
-        durationInFrames={90}
+        id="SetFlowPromo"
+        component={SetFlowPromo}
+        durationInFrames={TOTAL_FRAMES}
         fps={30}
         width={1080}
-        height={1080}
+        height={1920}
+      />
+      <Composition
+        id="LariPromo"
+        component={LariPromo}
+        durationInFrames={LARI_TOTAL_FRAMES}
+        fps={30}
+        width={1080}
+        height={1920}
       />
     </>
   );
