@@ -29,8 +29,8 @@ export const LariScene1Hook: React.FC = () => {
   const iconScale = interpolate(iconSpring, [0, 1], [0, 1]);
   const iconOpacity = interpolate(iconSpring, [0, 1], [0, 1]);
 
-  // "გაიცანი ლარი." fades in at frame 20, fades out at frame 48
-  const meetOpacity = interpolate(frame, [20, 35, 48, 58], [0, 1, 1, 0], {
+  // "გაიცანი ლარი." fades in at frame 15, fades out earlier
+  const meetOpacity = interpolate(frame, [15, 25, 38, 48], [0, 1, 1, 0], {
     extrapolateRight: "clamp",
     extrapolateLeft: "clamp",
   });
@@ -39,10 +39,10 @@ export const LariScene1Hook: React.FC = () => {
   const taglineWords = ["სწრაფი.", "მარტივი.", "ზუსტი."];
   const taglineColors = ["#FFFFFF", "#D4AF37", "rgba(255,255,255,0.7)"];
   const taglineWordOpacities = taglineWords.map((_, i) => {
-    const delay = 60 + i * 8;
+    const delay = 45 + i * 8;
     return spring({ frame: frame - delay, fps, config: { damping: 200 } });
   });
-  const taglineVisible = frame >= 58;
+  const taglineVisible = frame >= 45;
 
   return (
     <AbsoluteFill
@@ -79,12 +79,13 @@ export const LariScene1Hook: React.FC = () => {
           opacity: meetOpacity,
           fontSize: 80,
           fontWeight: 800,
+          marginTop: 260,
           color: "#FFFFFF",
           letterSpacing: -2,
           textAlign: "center",
         }}
       >
-        გაიცანი ლარი.
+        გაიცანი ლარი
       </div>
 
       {/* Tagline: "სწრაფი. მარტივი. ზუსტი." */}

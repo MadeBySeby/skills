@@ -16,18 +16,17 @@ import { LariScene4Outro } from "./scenes/LariScene4Outro";
 
 // Scene durations (frames @ 30 fps)
 const SCENE = {
-  s1: 90,  // 3 s  — Hook
-  s2: 180, // 6 s  — Screenshot overlay (typing anim)
-  s3: 120, // 4 s  — Multiple Currencies
-  s4: 90,  // 3 s  — Outro
+  s1: 90, // 3 s  — Hook
+  s2: 80, // <2 s — Screenshot overlay (typing anim)
+  s3: 100, // 4 s  — Multiple Currencies
+  s4: 90, // 3 s  — Outro
 };
 
 const TRANSITION_FRAMES = 20;
 
 // 450 frames = 15 s (minus overlap from transitions)
 export const LARI_TOTAL_FRAMES =
-  Object.values(SCENE).reduce((a, b) => a + b, 0) -
-  3 * TRANSITION_FRAMES; // 450 - 60 = 390 rendered frames
+  Object.values(SCENE).reduce((a, b) => a + b, 0) - 3 * TRANSITION_FRAMES; // 450 - 60 = 390 rendered frames
 
 export const LariPromo: React.FC = () => {
   return (
